@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMindBalance - Mental Health Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MMindBalance</h1>
+        <p>Your Mental Health Companion</p>
+    </header>
+
+    <main>
+        <!-- Relaxation Timer Section -->
+        <section id="relaxation">
+            <h2>Relaxation Zone</h2>
+            <div id="timer">00:00</div>
+            <select id="musicSelect">
+                <option value="">Select Music</option>
+                <option value="432hz">432Hz - Calm</option>
+                <option value="528hz">528Hz - Healing</option>
+                <option value="639hz">639Hz - Harmony</option>
+            </select>
+            <input type="file" id="customMusic" accept="audio/*">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot">
+            <h2>Daily Check-in</h2>
+            <div id="chatDisplay"></div>
+            <textarea id="chatInput" placeholder="Tell me about your day..."></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </section>
+
+        <!-- Goals Section -->
+        <section id="goals">
+            <h2>Your Goals</h2>
+            <canvas id="progressChart"></canvas>
+            <input type="text" id="goalInput" placeholder="Add new goal">
+            <button onclick="addGoal()">Add Goal</button>
+            <div id="goalsList"></div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar">
+            <h2>Calendar</h2>
+            <div id="calendarDisplay"></div>
+            <input type="text" id="eventInput" placeholder="Add event">
+            <input type="date" id="eventDate">
+            <button onclick="addEvent()">Add Event</button>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress">
+            <h2>Your Progress</h2>
+            <div id="progressPercentage">0%</div>
+            <div id="progressHistory"></div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
